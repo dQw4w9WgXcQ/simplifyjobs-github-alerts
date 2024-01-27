@@ -1,0 +1,22 @@
+{
+  "name": "simplifyjobs-github-alerts",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc && node --enable-source-maps dist/index.js",
+    "test": "tsc && node --enable-source-maps dist/test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-notifier": "^10.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.7",
+    "@types/node-notifier": "^8.0.5",
+    "prettier": "3.2.4",
+    "typescript": "^5.3.3"
+  }
+}
