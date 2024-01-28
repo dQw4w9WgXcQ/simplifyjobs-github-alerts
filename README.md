@@ -1,3 +1,5 @@
+alerts for https://github.com/SimplifyJobs/Summer2024-Internships
+
 ```bash
 npm i
 ```
@@ -8,7 +10,7 @@ npm run start
 
 by default, it will alert on all new postings.
 
-this can be configured in config in src/index.ts
+this can be configured in src/index.ts
 
 ```js
 let CONFIG = {
