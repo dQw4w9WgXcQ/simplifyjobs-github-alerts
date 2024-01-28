@@ -11,7 +11,7 @@ by default, it will alert on all new postings.
 this can be configured in config in src/index.ts
 
 ```js
-const CONFIG = {
+let CONFIG = {
   locationsBanlist: ["Canada", "London, UK"], //filters if substring match i.e. "Canada" will filter "Toronto, Canada"
   titleBanlist: ["Data Scien", "Data Analys", "Marketing", "Accounting", "Product"], //same behavior as locationsBanlist
   companyBanlist: undefined, //filters if exact match (unlike locationsBanlist and titleBanlist)
