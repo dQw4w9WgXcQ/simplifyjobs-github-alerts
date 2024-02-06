@@ -20,8 +20,7 @@ type Listing = {
 export const LISTINGS_JSON_URL =
   "https://raw.githubusercontent.com/SimplifyJobs/Summer2024-Internships/dev/.github/scripts/listings.json"
 
-export default async function update(state: State | undefined): Promise<[State, Listing[]]> {
-  let res = await fetch(LISTINGS_JSON_URL)
+export default async function update(state: State | undefined, res: Response): Promise<[State, Listing[]]> {
   if (!res.ok) throw new Error(`Failed to fetch listings: ${res.statusText}`)
 
   return internalUpdate(state, await res.text())

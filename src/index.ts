@@ -1,4 +1,4 @@
-import update, { setConfig, State } from "./update.js"
+import update, { LISTINGS_JSON_URL, setConfig, State } from "./update.js"
 import notifier from "node-notifier"
 
 //any allow/banlist can be disabled by setting it to undefined
@@ -10,23 +10,36 @@ let CONFIG // = {
 // }
 setConfig(CONFIG)
 
+notifier.notify({
+  title: "simplifyjobs-github-alerts",
+  message: "Starting",
+})
+
 let state: State | undefined = undefined
 
 while (true) {
+  let res: Response
   try {
-    let [newState, newJobs] = await update(state)
+    res = await fetch(LISTINGS_JSON_URL, { cache: "no-store" })
+  } catch (e) {
+    process.stdout.write("!")
+    await new Promise(resolve => setTimeout(resolve, 1000))
+    continue
+  }
+
+  try {
+    let [newState, newJobs] = await update(state, res)
     state = newState
 
     if (newJobs.length > 0) {
       console.log()
+      console.log(`${newJobs.length} new listings:`)
+      console.log(newJobs)
 
       notifier.notify({
         title: "simplifyjobs-github-alerts",
         message: `${newJobs.length} new jobs`,
       })
-
-      console.log(`${newJobs.length} new listings:`)
-      console.log(newJobs)
     } else {
       process.stdout.write(".")
     }
@@ -34,5 +47,5 @@ while (true) {
     console.error(e)
   }
 
-  await new Promise(resolve => setTimeout(resolve, 3000))
+  await new Promise(resolve => setTimeout(resolve, 60_000))
 }
