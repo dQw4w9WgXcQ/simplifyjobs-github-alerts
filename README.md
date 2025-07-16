@@ -1,4 +1,4 @@
-alerts for https://github.com/SimplifyJobs/Summer2024-Internships
+alerts for https://github.com/SimplifyJobs/Summer2026-Internships
 
 ```bash
 npm i
