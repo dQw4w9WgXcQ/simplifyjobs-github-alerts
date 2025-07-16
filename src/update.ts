@@ -15,6 +15,15 @@ type Listing = {
   locations: string[]
   terms: string[]
   id: string
+  // New fields available in 2026 format:
+  date_posted?: number
+  date_updated?: number
+  active?: boolean
+  url?: string
+  is_visible?: boolean
+  source?: string
+  company_url?: string
+  sponsorship?: string
 }
 
 export const LISTINGS_JSON_URL =
@@ -82,6 +91,23 @@ export async function internalUpdate(state: State | undefined, listingsText: str
 
       if (config.companyBanlist) {
         newListings = newListings.filter(listing => !config.companyBanlist.includes(listing.company_name))
+      }
+
+      // New 2026 format filters:
+      if (config.sponsorshipAllowlist) {
+        newListings = newListings.filter(listing => 
+          listing.sponsorship && config.sponsorshipAllowlist.includes(listing.sponsorship)
+        )
+      }
+
+      if (config.activeOnly) {
+        newListings = newListings.filter(listing => listing.active !== false)
+      }
+
+      if (config.sourceAllowlist) {
+        newListings = newListings.filter(listing => 
+          listing.source && config.sourceAllowlist.includes(listing.source)
+        )
       }
     }
   }

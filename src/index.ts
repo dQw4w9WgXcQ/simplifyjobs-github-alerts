@@ -7,6 +7,11 @@ let CONFIG // = {
 //   titleBanlist: ["Data Scien", "Data Analys", "Marketing", "Accounting", "Product"], //same behavior as locationsBanlist
 //   companyBanlist: undefined, //filters if exact match (unlike locationsBanlist and titleBanlist)
 //   termsAllowlist: ["Fall 2025", "Summer 2026"], //allows both "Fall 2025" and "Summer 2026"
+//   
+//   // New 2026 format options:
+//   sponsorshipAllowlist: ["Offers Sponsorship"], //only show jobs that offer visa sponsorship
+//   activeOnly: true, //only show active job postings
+//   sourceAllowlist: ["Simplify"], //only show jobs from specific sources
 // }
 setConfig(CONFIG)
 
