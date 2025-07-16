@@ -6,7 +6,7 @@ let CONFIG // = {
 //   locationsBanlist: ["Canada", "London, UK"], //filters if substring match i.e. "Canada" will filter "Toronto, Canada"
 //   titleBanlist: ["Data Scien", "Data Analys", "Marketing", "Accounting", "Product"], //same behavior as locationsBanlist
 //   companyBanlist: undefined, //filters if exact match (unlike locationsBanlist and titleBanlist)
-//   termsAllowlist: ["Fall 2024", "Summer 2024"], //allows both "Fall 2024" and "Summer 2024"
+//   termsAllowlist: ["Fall 2025", "Summer 2026"], //allows both "Fall 2025" and "Summer 2026"
 // }
 setConfig(CONFIG)
 

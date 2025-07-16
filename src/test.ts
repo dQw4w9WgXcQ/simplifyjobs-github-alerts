@@ -5,7 +5,7 @@ setConfig({
   locationsBanlist: ["Canada"],
   titleBanlist: ["Data Scien", "Data Analys", "Marketing", "Frontend", "Accounting", "Product"],
   companyBanlist: undefined,
-  termsAllowlist: ["Fall 2024", "Winter 2024"],
+  termsAllowlist: ["Fall 2025", "Winter 2025"],
 })
 
 let listingsTextPrefix = `[
@@ -17,7 +17,7 @@ let listingsTextPrefix = `[
         ],
         "title": "Product Development Intern ",
         "terms": [
-            "Summer 2024"
+            "Summer 2026"
         ],
         "id": "98b2d671-3f03-430e-b18c-e5ddb8ce5035"
     }`
@@ -34,7 +34,7 @@ let listingsText =
         "id": "0b82dc72-56a8-4fc9-aae5-c008f6da0b02",
         "title": "Trading Internship",
         "terms": [
-            "Fall 2024", "Summer 2024"
+            "Fall 2025", "Summer 2026"
         ],
         "locations": [
             "Chicago, IL"
@@ -45,7 +45,7 @@ let listingsText =
         "id": "e11db57c-bdea-4be0-bc67-9001293524d6",
         "title": "Performance Engineer Intern",
         "terms": [
-            "Summer 2024"
+            "Summer 2026"
         ],
         "locations": [
             "Chicago, IL"
@@ -56,7 +56,7 @@ let listingsText =
         "id": "6f863309-148d-494d-aa36-f375a1af4bef",
         "title": "Quantitative Strategist Intern",
         "terms": [
-            "Fall 2024"
+            "Fall 2025"
         ],
         "locations": [
             "Chicago, IL",
@@ -68,7 +68,7 @@ let listingsText =
         "id": "6f863309-148d-494d-aa36-f375a1af4bed",
         "title": "Data ScienQuantitative Strategist Intern",
         "terms": [
-            "Fall 2024"
+            "Fall 2025"
         ],
         "locations": [
             "Chicago, IL"

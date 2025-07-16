@@ -18,7 +18,7 @@ type Listing = {
 }
 
 export const LISTINGS_JSON_URL =
-  "https://raw.githubusercontent.com/SimplifyJobs/Summer2024-Internships/dev/.github/scripts/listings.json"
+  "https://raw.githubusercontent.com/SimplifyJobs/Summer2026-Internships/refs/heads/dev/.github/scripts/listings.json"
 
 export default async function update(state: State | undefined, res: Response): Promise<[State, Listing[]]> {
   if (!res.ok) throw new Error(`Failed to fetch listings: ${res.statusText}`)
